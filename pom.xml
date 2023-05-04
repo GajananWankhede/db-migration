@@ -5,17 +5,17 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.6</version>
+        <version>2.7.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.migration</groupId>
-    <artifactId>spring-db-migration</artifactId>
+    <groupId>com.db</groupId>
+    <artifactId>db-migration-services</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>spring-db-migration</name>
-    <description>spring-db-migration</description>
+    <name>db-migration-services</name>
+    <description>db-migration-services</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
