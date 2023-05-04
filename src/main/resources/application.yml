@@ -1,0 +1,43 @@
+server:
+  port: 7032
+spring:
+  #  cloud:
+  #    config:
+  #      server:
+  #        jdbc:
+  #          order: 1
+  #          sql: SELECT PROPERTIES.KEY, PROPERTIES.VALUE from PROPERTIES where APPLICATION=? and PROFILE=? and LABEL=?
+  application:
+    name: spring-db-migration-services
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/dbschema
+    username: root
+
+  jpa:
+    generate-ddl: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL55Dialect
+    show-sql: true
+  profiles:
+    active: jdbc
+  security:
+    user:
+      name: root
+      password: root
+
+  #eureka:
+  #    client:
+  #        enabled: true
+  #        serviceUrl:
+  #            defaultZone: http://localhost:9000/eureka/
+
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    password: root
+    schemas: valschema
+    user: root
