@@ -42,3 +42,4 @@ spring:
     schemas: dbschema
     user: root
     baseline-on-migrate: true
+    validate-on-migrate: false
